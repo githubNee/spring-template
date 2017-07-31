@@ -4,9 +4,13 @@
     "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
   <session-factory>
-    <property name="connection.url"/>
-    <property name="connection.driver_class"/>
-    <!-- <property name="connection.username"/> -->
+    <property name="connection.url">jdbc:mysql://115.159.126.61:3306/test</property>
+    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+      <mapping class="com.example.demo.Entity.ClassEntity"/>
+      <mapping class="com.example.demo.Entity.StudentEntity"/>
+      <mapping class="com.example.demo.Entity.StudentClassEntity"/>
+      <mapping class="com.example.demo.Entity.TeacherEntity"/>
+      <!-- <property name="connection.username"/> -->
     <!-- <property name="connection.password"/> -->
 
     <!-- DB schema will be updated if needed -->

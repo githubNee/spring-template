@@ -10,7 +10,7 @@ import java.io.IOException;
 @RestController
 @RequestMapping("/api/upload")
 public class FileController {
-    @RequestMapping("/")
+    @RequestMapping("/file")
     String upload(@RequestParam("file") MultipartFile file) {
         try {
             byte[] bytes = file.getBytes();
@@ -22,5 +22,10 @@ public class FileController {
             e.printStackTrace();
         }
         return "fuck";
+    }
+
+    @RequestMapping("/test")
+    String test() {
+        return "Hello";
     }
 }
